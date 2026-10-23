@@ -130,7 +130,7 @@ export default function ProjectDetail() {
               {project.metrics.map((m, i) => (
                 <Reveal key={`${m.label}-${i}`} delay={i * 0.1}>
                   <Box p={8} borderRadius="3xl" bg="surface" border="1px solid" borderColor="border" textAlign="center" _hover={{ borderColor: 'accent' }} transition="all .3s">
-                    <Heading fontSize={{ base: '5xl', md: '6xl' }} bgGradient="linear(to-r, brand.300, partner.300)" bgClip="text" fontWeight="700">
+                    <Heading fontSize={{ base: '5xl', md: '6xl' }} bgGradient="linear(to-r, ink.a, ink.b)" bgClip="text" fontWeight="700">
                       {m.value}
                     </Heading>
                     <Text color="muted" mt={2}>

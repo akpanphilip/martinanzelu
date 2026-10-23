@@ -21,7 +21,7 @@ export function Preloader({ name, onDone }: { name: string; onDone: () => void }
       position="fixed"
       inset={0}
       zIndex={5000}
-      bg="#07070d"
+      bg="#13090C"
       color="white"
       exit={{ y: '-100%', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}
       transition={{ duration: 1, ease: EASE }}
@@ -41,7 +41,7 @@ export function Preloader({ name, onDone }: { name: string; onDone: () => void }
         </Box>
         <Flex justify="space-between" align="flex-end">
           <Box w={{ base: '50%', md: '30%' }} h="2px" bg="whiteAlpha.200" position="relative" overflow="hidden" mb={4}>
-            <Box position="absolute" inset={0} w={`${count}%`} bgGradient="linear(to-r, brand.400, partner.400)" />
+            <Box position="absolute" inset={0} w={`${count}%`} bgGradient="linear(to-r, brand.300, partner.400)" />
           </Box>
           <Heading fontSize={{ base: '6xl', md: '9xl' }} fontWeight="700" lineHeight="1" sx={{ fontVariantNumeric: 'tabular-nums' }}>
             {count}

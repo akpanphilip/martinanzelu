@@ -144,9 +144,9 @@ export function Work() {
                   px={4}
                   h="36px"
                   flexShrink={0}
-                  color={filter === c ? 'white' : 'muted'}
+                  color={filter === c ? 'onFill' : 'muted'}
                   onClick={() => setFilter(c)}
-                  _hover={{ color: filter === c ? 'white' : 'fg' }}
+                  _hover={{ color: filter === c ? 'onFill' : 'fg' }}
                 >
                   {filter === c && (
                     <MotionBox
@@ -154,7 +154,7 @@ export function Work() {
                       position="absolute"
                       inset={0}
                       borderRadius="full"
-                      bgGradient="linear(to-r, brand.500, partner.500)"
+                      bgGradient="linear(to-r, fill.a, fill.b)"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                     />
                   )}

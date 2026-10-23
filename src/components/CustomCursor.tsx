@@ -57,7 +57,7 @@ export function CustomCursor() {
         ml="-3px"
         mt="-3px"
         borderRadius="full"
-        bg="brand.300"
+        bg="accent"
         opacity={label ? 0 : 1}
       />
       <MotionBox
@@ -69,8 +69,8 @@ export function CustomCursor() {
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
         borderRadius="full"
         border="1.5px solid"
-        borderColor="brand.300"
-        bg={label ? 'brand.400' : hover ? 'rgba(183,148,244,0.12)' : 'transparent'}
+        borderColor="accent"
+        bg={label ? 'fill.a' : hover ? 'color-mix(in srgb, var(--chakra-colors-brand-300) 14%, transparent)' : 'transparent'}
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -79,7 +79,7 @@ export function CustomCursor() {
         <AnimatePresence>
           {label && (
             <MotionBox initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
-              <Text fontSize="xs" fontWeight="700" color="white" textTransform="uppercase" letterSpacing="0.1em">
+              <Text fontSize="xs" fontWeight="700" color="onFill" textTransform="uppercase" letterSpacing="0.1em">
                 {label}
               </Text>
             </MotionBox>
