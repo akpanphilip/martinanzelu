@@ -62,7 +62,7 @@ export function DashboardPanel({ goTo }: { goTo: (tab: string) => void }) {
                   {s.sub}
                 </Text>
               </Box>
-              <Flex w="48px" h="48px" borderRadius="xl" bgGradient="linear(135deg, brand.400, partner.500)" color="white" align="center" justify="center" fontSize="xl">
+              <Flex w="48px" h="48px" borderRadius="xl" bgGradient="linear(135deg, fill.a, fill.b)" color="onFill" align="center" justify="center" fontSize="xl">
                 <Icon as={s.icon} />
               </Flex>
             </Flex>
@@ -291,7 +291,7 @@ export function ServicesPanel() {
         renderThumb={(s) => {
           const I = SERVICE_ICONS[s.icon] ?? FiStar;
           return (
-            <Flex w="40px" h="40px" borderRadius="lg" bgGradient="linear(135deg, brand.400, partner.500)" color="white" align="center" justify="center" flexShrink={0}>
+            <Flex w="40px" h="40px" borderRadius="lg" bgGradient="linear(135deg, fill.a, fill.b)" color="onFill" align="center" justify="center" flexShrink={0}>
               <I />
             </Flex>
           );
@@ -523,20 +523,20 @@ export function SettingsPanel() {
         <Wrap spacing={3}>
           {ACCENTS.map((a) => (
             <WrapItem key={a}>
-              <Tooltip label={a} textTransform="capitalize">
+              <Tooltip label={a === 'cream' ? 'Cream (light) & burgundy (dark)' : a} textTransform="capitalize">
                 <Box
                   as="button"
                   aria-label={a}
                   w="44px"
                   h="44px"
                   borderRadius="full"
-                  bg={`${a}.400`}
+                  bg={a === 'cream' ? 'linear-gradient(135deg, #EEDFC6 50%, #912E48 50%)' : `${a}.400`}
                   outline="3px solid"
                   outlineColor={settings.accent === a ? 'fg' : 'transparent'}
                   outlineOffset="3px"
                   transition="transform .2s"
                   _hover={{ transform: 'scale(1.1)' }}
-                  onClick={() => set({ accent: a })}
+                  onClick={() => set({ accent: a, accentChosen: true })}
                 />
               </Tooltip>
             </WrapItem>

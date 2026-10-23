@@ -10,7 +10,7 @@ export default function NotFound() {
       <AuroraBackground />
       <Container maxW="2xl" textAlign="center" position="relative" zIndex={1}>
         <MotionBox animate={{ y: [0, -20, 0], rotate: [0, 3, -3, 0] }} transition={{ duration: 5, repeat: Infinity }}>
-          <Heading fontSize={{ base: '8xl', md: '12rem' }} lineHeight="1" bgGradient="linear(to-r, brand.300, partner.300)" bgClip="text">
+          <Heading fontSize={{ base: '8xl', md: '12rem' }} lineHeight="1" bgGradient="linear(to-r, ink.a, ink.b)" bgClip="text">
             404
           </Heading>
         </MotionBox>

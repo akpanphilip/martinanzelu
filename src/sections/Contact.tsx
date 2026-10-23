@@ -85,7 +85,7 @@ export function Contact() {
             <Heading fontSize={{ base: '5xl', md: '7xl' }} lineHeight="1" mb={8}>
               <SplitText text="Let's create" inView />
               <br />
-              <Box as="span" bgGradient="linear(to-r, brand.300, partner.300)" bgClip="text">
+              <Box as="span" bgGradient="linear(to-r, ink.a, ink.b)" bgClip="text">
                 <SplitText text="something great." inView delay={0.15} />
               </Box>
             </Heading>
@@ -205,9 +205,9 @@ export function Contact() {
                   type="submit"
                   size="lg"
                   h="60px"
-                  color="white"
-                  bgGradient="linear(to-r, brand.500, partner.500)"
-                  _hover={{ bgGradient: 'linear(to-r, brand.400, partner.400)', transform: 'translateY(-2px)' }}
+                  color="onFill"
+                  bgGradient="linear(to-r, fill.a, fill.b)"
+                  _hover={{ filter: 'brightness(1.08)', transform: 'translateY(-2px)' }}
                   rightIcon={<FiSend />}
                   isLoading={sending}
                   loadingText="Sending"

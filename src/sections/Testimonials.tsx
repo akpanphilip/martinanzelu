@@ -12,7 +12,7 @@ function QuoteCard({ t, highlight }: { t: Testimonial; highlight: boolean }) {
       p={{ base: 6, md: 7 }}
       borderRadius="3xl"
       bg={highlight ? 'transparent' : 'surface'}
-      bgGradient={highlight ? 'linear(150deg, brand.600, partner.700)' : undefined}
+      bgGradient={highlight ? 'linear(150deg, hl.a, hl.b)' : undefined}
       color={highlight ? 'white' : undefined}
       border="1px solid"
       borderColor={highlight ? 'transparent' : 'border'}

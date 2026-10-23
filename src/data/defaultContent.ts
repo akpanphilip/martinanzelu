@@ -160,7 +160,7 @@ export const defaultContent: Content = {
   ],
   messages: [],
   settings: {
-    accent: 'purple',
+    accent: 'cream',
     passcode: DEFAULT_PASSCODE,
     showPreloader: true,
     customCursor: true,

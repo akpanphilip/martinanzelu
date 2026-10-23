@@ -26,7 +26,7 @@ export function Experience() {
             bottom={0}
             w="2px"
             ml={{ md: '-1px' }}
-            bgGradient="linear(to-b, brand.400, partner.400)"
+            bgGradient="linear(to-b, fill.a, fill.b)"
             style={{ scaleY, transformOrigin: 'top' }}
           />
           {content.experience.map((e, i) => {

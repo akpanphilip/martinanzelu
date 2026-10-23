@@ -16,6 +16,11 @@ interface ContentCtx {
 
 const Ctx = createContext<ContentCtx | null>(null);
 
+/** Saves made before cream became the default still say purple; upgrade them unless the owner chose it. */
+function migrateSettings(s: Content['settings']): Content['settings'] {
+  return s.accent === 'purple' && !s.accentChosen ? { ...s, accent: defaultContent.settings.accent } : s;
+}
+
 /** Merge stored data with defaults so newly added fields never break older saves. */
 export function normalizeContent(raw: Partial<Content>): Content {
   const profile = { ...defaultContent.profile, ...(raw.profile ?? {}) };
@@ -24,7 +29,7 @@ export function normalizeContent(raw: Partial<Content>): Content {
     ...defaultContent,
     ...raw,
     profile,
-    settings: { ...defaultContent.settings, ...(raw.settings ?? {}) },
+    settings: migrateSettings({ ...defaultContent.settings, ...(raw.settings ?? {}) }),
   };
 }
 

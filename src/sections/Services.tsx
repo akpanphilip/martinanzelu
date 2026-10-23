@@ -43,8 +43,8 @@ export function Services() {
                       align="center"
                       justify="center"
                       bg="brand.500"
-                      bgGradient="linear(135deg, brand.400, partner.500)"
-                      color="white"
+                      bgGradient="linear(135deg, fill.a, fill.b)"
+                      color="onFill"
                       fontSize="2xl"
                       transition="transform .6s cubic-bezier(.22,1,.36,1)"
                       _groupHover={{ transform: 'rotate(-12deg) scale(1.1)' }}
