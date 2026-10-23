@@ -55,7 +55,7 @@ export function ScrollProgress() {
       right={0}
       h="3px"
       zIndex={2000}
-      bgGradient="linear(to-r, brand.400, partner.400)"
+      bgGradient="linear(to-r, fill.a, fill.b)"
       style={{ scaleX, transformOrigin: '0%' }}
     />
   );
@@ -244,7 +244,10 @@ export function Orb({ size = '0.55em' }: { size?: BoxProps['w'] }) {
 /** Card with a soft spotlight that follows the pointer. */
 export function SpotlightCard({ children, ...rest }: { children: ReactNode } & BoxProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const spot = useColorModeValue('rgba(128,90,213,0.10)', 'rgba(183,148,244,0.12)');
+  const spot = useColorModeValue(
+    'color-mix(in srgb, var(--chakra-colors-brand-500) 12%, transparent)',
+    'color-mix(in srgb, var(--chakra-colors-brand-300) 12%, transparent)',
+  );
   return (
     <Box
       ref={ref}

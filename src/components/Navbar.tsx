@@ -117,10 +117,10 @@ export function Navbar() {
                 w="40px"
                 h="40px"
                 borderRadius="xl"
-                bgGradient="linear(135deg, brand.400, partner.400)"
+                bgGradient="linear(135deg, fill.a, fill.b)"
                 align="center"
                 justify="center"
-                color="white"
+                color="onFill"
                 fontWeight="700"
                 fontFamily="heading"
                 boxShadow="0 8px 24px -6px var(--chakra-colors-brand-500)"
@@ -179,9 +179,9 @@ export function Navbar() {
                 size="sm"
                 px={5}
                 rightIcon={<FiArrowUpRight />}
-                bgGradient="linear(to-r, brand.500, partner.500)"
-                color="white"
-                _hover={{ bgGradient: 'linear(to-r, brand.400, partner.400)', transform: 'translateY(-2px)' }}
+                bgGradient="linear(to-r, fill.a, fill.b)"
+                color="onFill"
+                _hover={{ filter: 'brightness(1.08)', transform: 'translateY(-2px)' }}
                 onClick={() => handleNav('contact')}
               >
                 Let&apos;s talk

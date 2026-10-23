@@ -1,4 +1,4 @@
-export type Accent = 'purple' | 'pink' | 'teal' | 'cyan' | 'orange' | 'blue' | 'green' | 'red';
+export type Accent = 'cream' | 'purple' | 'pink' | 'teal' | 'cyan' | 'orange' | 'blue' | 'green' | 'red';
 
 export type SocialPlatform =
   | 'dribbble' | 'behance' | 'linkedin' | 'x' | 'instagram' | 'github' | 'figma' | 'medium' | 'website';
@@ -61,6 +61,8 @@ export interface Message {
 
 export interface Settings {
   accent: Accent;
+  /** True once the owner picks an accent in the admin panel. */
+  accentChosen?: boolean;
   passcode: string;
   showPreloader: boolean;
   customCursor: boolean;

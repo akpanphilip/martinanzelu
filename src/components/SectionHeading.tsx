@@ -15,7 +15,7 @@ export function SectionHeading({ eyebrow, title, highlight, description, align =
     <Box textAlign={align} mb={{ base: 10, md: 16 }} maxW={center ? '3xl' : '4xl'} mx={center ? 'auto' : undefined}>
       <Reveal y={20}>
         <HStack spacing={3} justify={center ? 'center' : 'flex-start'} mb={4}>
-          <Box w="32px" h="2px" bgGradient="linear(to-r, brand.400, partner.400)" />
+          <Box w="32px" h="2px" bgGradient="linear(to-r, fill.a, fill.b)" />
           <Text textTransform="uppercase" letterSpacing="0.25em" fontSize="xs" fontWeight="600" color="accent">
             {eyebrow}
           </Text>
@@ -24,7 +24,7 @@ export function SectionHeading({ eyebrow, title, highlight, description, align =
       <Heading fontSize={{ base: '4xl', md: '6xl' }} lineHeight="1.05">
         <SplitText text={title} inView />{' '}
         {highlight && (
-          <Box as="span" bgGradient="linear(to-r, brand.300, partner.300)" bgClip="text">
+          <Box as="span" bgGradient="linear(to-r, ink.a, ink.b)" bgClip="text">
             <SplitText text={highlight} inView delay={0.15} />
           </Box>
         )}

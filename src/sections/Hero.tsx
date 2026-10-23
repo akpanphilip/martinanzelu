@@ -23,7 +23,7 @@ function RotatingWord({ words }: { words: string[] }) {
           as="span"
           key={word}
           display="inline-block"
-          bgGradient="linear(to-r, brand.300, partner.300)"
+          bgGradient="linear(to-r, ink.a, ink.b)"
           bgClip="text"
           initial={{ y: '100%', opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -76,8 +76,8 @@ function CircularBadge({ text, onClick }: { text: string; onClick: () => void })
         align="center"
         justify="center"
         fontSize={{ base: 'lg', md: 'xl' }}
-        color="white"
-        bgGradient="linear(135deg, brand.400, partner.500)"
+        color="onFill"
+        bgGradient="linear(135deg, fill.a, fill.b)"
         transition="transform .5s cubic-bezier(.22,1,.36,1)"
         _groupHover={{ transform: 'rotate(-45deg) scale(1.08)' }}
       >
@@ -193,9 +193,9 @@ export function Hero() {
                       size="lg"
                       h="60px"
                       px={8}
-                      color="white"
-                      bgGradient="linear(to-r, brand.500, partner.500)"
-                      _hover={{ bgGradient: 'linear(to-r, brand.400, partner.400)', boxShadow: '0 20px 40px -12px var(--chakra-colors-brand-500)' }}
+                      color="onFill"
+                      bgGradient="linear(to-r, fill.a, fill.b)"
+                      _hover={{ filter: 'brightness(1.08)', boxShadow: '0 20px 40px -12px var(--chakra-colors-brand-500)' }}
                       rightIcon={<FiArrowUpRight />}
                       onClick={() => goTo('work')}
                       w={{ base: 'full', sm: 'auto' }}
@@ -232,7 +232,7 @@ export function Hero() {
                   position="absolute"
                   inset="-14px"
                   borderRadius="40px"
-                  bgGradient="linear(135deg, brand.400, partner.400)"
+                  bgGradient="linear(135deg, brand.300, partner.400)"
                   filter="blur(30px)"
                   opacity={0.5}
                 />

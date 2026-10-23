@@ -91,7 +91,7 @@ export function About() {
                         <MotionBox
                           h="full"
                           borderRadius="full"
-                          bgGradient="linear(to-r, brand.400, partner.400)"
+                          bgGradient="linear(to-r, fill.a, fill.b)"
                           initial={{ width: 0 }}
                           whileInView={{ width: `${Math.min(100, Math.max(0, s.level))}%` }}
                           viewport={{ once: true }}

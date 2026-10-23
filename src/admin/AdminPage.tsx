@@ -53,7 +53,7 @@ function Login({ onSuccess }: { onSuccess: () => void }) {
         transition={{ duration: shake ? 0.4 : 0.8, ease: EASE }}
       >
         <Box as="form" onSubmit={submit} p={{ base: 8, md: 10 }} borderRadius="3xl" bg="glass" backdropFilter="blur(20px)" border="1px solid" borderColor="border.strong" boxShadow="2xl">
-          <Flex w="56px" h="56px" borderRadius="2xl" bgGradient="linear(135deg, brand.400, partner.500)" color="white" align="center" justify="center" fontSize="2xl" mb={6}>
+          <Flex w="56px" h="56px" borderRadius="2xl" bgGradient="linear(135deg, fill.a, fill.b)" color="onFill" align="center" justify="center" fontSize="2xl" mb={6}>
             <FiLock />
           </Flex>
           <Heading size="lg">Admin panel</Heading>
@@ -156,7 +156,7 @@ export default function AdminPage() {
         bg="bg.subtle"
       >
         <HStack mb={8} px={2}>
-          <Flex w="40px" h="40px" borderRadius="xl" bgGradient="linear(135deg, brand.400, partner.400)" color="white" fontWeight="700" align="center" justify="center">
+          <Flex w="40px" h="40px" borderRadius="xl" bgGradient="linear(135deg, fill.a, fill.b)" color="onFill" fontWeight="700" align="center" justify="center">
             {initials(content.profile.name)}
           </Flex>
           <Box lineHeight="1.2">
